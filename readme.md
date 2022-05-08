@@ -67,7 +67,7 @@ static IDocument GenerateDocument() =>
         });
     });
 ```
-<sup><a href='/src/Tests/Samples.cs#L16-L49' title='Snippet source file'>snippet source</a> | <a href='#snippet-generatedocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L19-L52' title='Snippet source file'>snippet source</a> | <a href='#snippet-generatedocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -77,10 +77,13 @@ static IDocument GenerateDocument() =>
 <a id='snippet-verifydocument'></a>
 ```cs
 [Test]
-public Task VerifyDocument() =>
-    Verify(GenerateDocument());
+public Task VerifyDocument()
+{
+    var document = GenerateDocument();
+    return Verify(document);
+}
 ```
-<sup><a href='/src/Tests/Samples.cs#L8-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-verifydocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L8-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-verifydocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -93,14 +96,17 @@ public Task VerifyDocument() =>
 <a id='snippet-Samples.VerifyDocument.00.verified.txt'></a>
 ```txt
 {
-  CreationDate: DateTime_1,
-  ModifiedDate: DateTime_2,
-  ImageQuality: 101,
-  PdfA: false,
-  RasterDpi: 72
+  Pages: 1,
+  Metadata: {
+    CreationDate: DateTime_1,
+    ModifiedDate: DateTime_2,
+    ImageQuality: 101,
+    PdfA: false,
+    RasterDpi: 72
+  }
 }
 ```
-<sup><a href='/src/Tests/Samples.VerifyDocument.00.verified.txt#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.00.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.VerifyDocument.00.verified.txt#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.00.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

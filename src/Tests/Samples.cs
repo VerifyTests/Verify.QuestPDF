@@ -8,8 +8,11 @@ public class Samples
     #region VerifyDocument
 
     [Test]
-    public Task VerifyDocument() =>
-        Verify(GenerateDocument());
+    public Task VerifyDocument()
+    {
+        var document = GenerateDocument();
+        return Verify(document);
+    }
 
     #endregion
 
