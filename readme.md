@@ -1,6 +1,6 @@
 # <img src="/src/icon.png" height="30px"> Verify.QuestPDF
 
-[![Build status](https://ci.appveyor.com/api/projects/status/c2h902l25lpel78q?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-QuestPDF)
+[![Build status](https://ci.appveyor.com/api/projects/status/rd15cvt9gsyof9bb?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-QuestPDF)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.QuestPDF.svg)](https://www.nuget.org/packages/Verify.QuestPDF/)
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of documents via [QuestPDF](https://www.questpdf.com/).
