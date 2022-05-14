@@ -1,5 +1,4 @@
 using QuestPDF.Drawing;
-using VerifyTests;
 
 class DocumentMetadataConverter :
     WriteOnlyJsonConverter<DocumentMetadata>
