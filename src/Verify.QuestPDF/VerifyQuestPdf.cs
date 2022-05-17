@@ -7,9 +7,9 @@ public static class VerifyQuestPdf
 {
     public static void Initialize()
     {
-        VerifierSettings.ModifySerialization(
-            _ => _.AddExtraSettings(
-                _ => _.Converters.Add(new DocumentMetadataConverter())));
+        VerifierSettings
+            .AddExtraSettings(
+                _ => _.Converters.Add(new DocumentMetadataConverter()));
         VerifierSettings.RegisterFileConverter<IDocument>(
             conversion: (document, settings) =>
             {
