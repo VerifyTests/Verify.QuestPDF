@@ -26,7 +26,7 @@ public static class VerifyQuestPdf
                 {
                     var page = pages[index];
                     var stream = new MemoryStream(page);
-                    targets.Add(new("png", stream, null));
+                    targets.Add(new("png", stream));
                 }
 
                 return new(
