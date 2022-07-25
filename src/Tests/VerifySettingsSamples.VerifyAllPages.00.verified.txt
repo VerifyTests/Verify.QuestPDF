@@ -1,0 +1,10 @@
+﻿{
+  Pages: 2,
+  Metadata: {
+    CreationDate: DateTime_1,
+    ModifiedDate: DateTime_2,
+    ImageQuality: 101,
+    PdfA: false,
+    RasterDpi: 72
+  }
+}

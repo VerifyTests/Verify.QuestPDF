@@ -1,4 +1,4 @@
-﻿using QuestPDF.Fluent;
+using QuestPDF.Fluent;
 using QuestPDF.Infrastructure;
 
 namespace VerifyTests;
@@ -16,15 +16,11 @@ public static class VerifyQuestPdf
                 var pages = document.GenerateImages().ToList();
 
                 var targets = new List<Target>();
-                var max = pages.Count;
-                if (settings.GetPagesToInclude(out var pagesToInclude))
-                {
-                    max = pagesToInclude.Value;
-                }
+                var pagesToInclude = settings.GetPagesToInclude(pages.Count);
 
-                for (var index = 0; index < max; index++)
+                foreach (var pageIndex in pagesToInclude)
                 {
-                    var page = pages[index];
+                    var page = pages[pageIndex];
                     var stream = new MemoryStream(page);
                     targets.Add(new("png", stream));
                 }
@@ -32,7 +28,7 @@ public static class VerifyQuestPdf
                 return new(
                     info: new
                     {
-                        Pages = pages.Count,
+                        Pages = pagesToInclude.Length,
                         Metadata = document.GetMetadata(),
                     },
                     targets);
