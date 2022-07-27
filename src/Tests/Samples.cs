@@ -28,6 +28,18 @@ public class Samples
 
     #endregion
 
+    #region PagesToIncludeDynamic
+
+    [Test]
+    public Task PagesToIncludeDynamic()
+    {
+        var document = GenerateDocument();
+        return Verify(document)
+            .PagesToInclude(pageNumber => pageNumber == 2);
+    }
+
+    #endregion
+
     #region GenerateDocument
 
     static IDocument GenerateDocument() =>
