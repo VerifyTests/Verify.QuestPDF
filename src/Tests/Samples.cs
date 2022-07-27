@@ -16,38 +16,53 @@ public class Samples
 
     #endregion
 
+    #region PagesToInclude
+
+    [Test]
+    public Task PagesToInclude()
+    {
+        var document = GenerateDocument();
+        return Verify(document)
+            .PagesToInclude(1);
+    }
+
+    #endregion
+
     #region GenerateDocument
 
     static IDocument GenerateDocument() =>
         Document.Create(container =>
         {
-            container.Page(page =>
-            {
-                page.Size(PageSizes.A5);
-                page.Margin(1, Unit.Centimetre);
-                page.PageColor(Colors.Grey.Lighten3);
-                page.DefaultTextStyle(x => x.FontSize(20));
-
-                page.Header()
-                    .Text("Hello PDF!")
-                    .SemiBold().FontSize(36);
-
-                page.Content()
-                    .Column(x =>
-                    {
-                        x.Item()
-                            .Text(Placeholders.LoremIpsum());
-                    });
-
-                page.Footer()
-                    .AlignCenter()
-                    .Text(x =>
-                    {
-                        x.Span("Page ");
-                        x.CurrentPageNumber();
-                    });
-            });
+            container.Page(AddPage);
+            container.Page(AddPage);
         });
+
+    static void AddPage(PageDescriptor page)
+    {
+        page.Size(PageSizes.A5);
+        page.Margin(1, Unit.Centimetre);
+        page.PageColor(Colors.Grey.Lighten3);
+        page.DefaultTextStyle(x => x.FontSize(20));
+
+        page.Header()
+            .Text("Hello PDF!")
+            .SemiBold().FontSize(36);
+
+        page.Content()
+            .Column(x =>
+            {
+                x.Item()
+                    .Text(Placeholders.LoremIpsum());
+            });
+
+        page.Footer()
+            .AlignCenter()
+            .Text(x =>
+            {
+                x.Span("Page ");
+                x.CurrentPageNumber();
+            });
+    }
 
     #endregion
 }

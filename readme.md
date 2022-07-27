@@ -39,35 +39,38 @@ public static class ModuleInitializer
 static IDocument GenerateDocument() =>
     Document.Create(container =>
     {
-        container.Page(page =>
-        {
-            page.Size(PageSizes.A5);
-            page.Margin(1, Unit.Centimetre);
-            page.PageColor(Colors.Grey.Lighten3);
-            page.DefaultTextStyle(x => x.FontSize(20));
-
-            page.Header()
-                .Text("Hello PDF!")
-                .SemiBold().FontSize(36);
-
-            page.Content()
-                .Column(x =>
-                {
-                    x.Item()
-                        .Text(Placeholders.LoremIpsum());
-                });
-
-            page.Footer()
-                .AlignCenter()
-                .Text(x =>
-                {
-                    x.Span("Page ");
-                    x.CurrentPageNumber();
-                });
-        });
+        container.Page(AddPage);
+        container.Page(AddPage);
     });
+
+static void AddPage(PageDescriptor page)
+{
+    page.Size(PageSizes.A5);
+    page.Margin(1, Unit.Centimetre);
+    page.PageColor(Colors.Grey.Lighten3);
+    page.DefaultTextStyle(x => x.FontSize(20));
+
+    page.Header()
+        .Text("Hello PDF!")
+        .SemiBold().FontSize(36);
+
+    page.Content()
+        .Column(x =>
+        {
+            x.Item()
+                .Text(Placeholders.LoremIpsum());
+        });
+
+    page.Footer()
+        .AlignCenter()
+        .Text(x =>
+        {
+            x.Span("Page ");
+            x.CurrentPageNumber();
+        });
+}
 ```
-<sup><a href='/src/Tests/Samples.cs#L19-L52' title='Snippet source file'>snippet source</a> | <a href='#snippet-generatedocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L31-L67' title='Snippet source file'>snippet source</a> | <a href='#snippet-generatedocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -96,7 +99,7 @@ public Task VerifyDocument()
 <a id='snippet-Samples.VerifyDocument.00.verified.txt'></a>
 ```txt
 {
-  Pages: 1,
+  Pages: 2,
   Metadata: {
     CreationDate: DateTime_1,
     ModifiedDate: DateTime_2,
@@ -113,3 +116,20 @@ public Task VerifyDocument()
 #### Pdf as image
 
 ![](src/Tests/Samples.VerifyDocument.01.verified.png)
+
+
+## PagesToInclude
+
+<!-- snippet: PagesToInclude -->
+<a id='snippet-pagestoinclude'></a>
+```cs
+[Test]
+public Task PagesToInclude()
+{
+    var document = GenerateDocument();
+    return Verify(document)
+        .PagesToInclude(1);
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L19-L29' title='Snippet source file'>snippet source</a> | <a href='#snippet-pagestoinclude' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
