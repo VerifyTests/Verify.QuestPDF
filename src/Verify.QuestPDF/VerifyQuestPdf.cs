@@ -16,17 +16,19 @@ public static class VerifyQuestPdf
                 var pages = document.GenerateImages().ToList();
 
                 var targets = new List<Target>();
-                var max = pages.Count;
-                if (settings.GetPagesToInclude(out var pagesToInclude))
+                if (!settings.GetPagesToInclude(out var pagesToInclude))
                 {
-                    max = pagesToInclude.Value;
+                    pagesToInclude = _ => true;
                 }
 
-                for (var index = 0; index < max; index++)
+                for (var index = 0; index < pages.Count; index++)
                 {
-                    var page = pages[index];
-                    var stream = new MemoryStream(page);
-                    targets.Add(new("png", stream));
+                    if (pagesToInclude(index + 1))
+                    {
+                        var page = pages[index];
+                        var stream = new MemoryStream(page);
+                        targets.Add(new("png", stream));
+                    }
                 }
 
                 return new(
