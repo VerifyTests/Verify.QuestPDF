@@ -91,8 +91,8 @@ public Task VerifyDocument()
 
 #### Metadata
 
-<!-- snippet: Samples.VerifyDocument.00.verified.txt -->
-<a id='snippet-Samples.VerifyDocument.00.verified.txt'></a>
+<!-- snippet: Samples.VerifyDocument.verified.txt -->
+<a id='snippet-Samples.VerifyDocument.verified.txt'></a>
 ```txt
 {
   Pages: 2,
@@ -105,13 +105,13 @@ public Task VerifyDocument()
   }
 }
 ```
-<sup><a href='/src/Tests/Samples.VerifyDocument.00.verified.txt#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.00.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.VerifyDocument.verified.txt#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
 #### Pdf as image
 
-![](src/Tests/Samples.VerifyDocument.01.verified.png)
+![](src/Tests/Samples.VerifyDocument.verified.png)
 
 
 ## PagesToInclude
