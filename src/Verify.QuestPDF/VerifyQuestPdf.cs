@@ -7,6 +7,7 @@ public static class VerifyQuestPdf
 {
     public static void Initialize()
     {
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings
             .AddExtraSettings(
                 _ => _.Converters.Add(new DocumentMetadataConverter()));
