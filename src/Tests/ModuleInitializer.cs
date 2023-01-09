@@ -3,12 +3,12 @@
     #region enable
 
     [ModuleInitializer]
-    public static void Init()
-    {
+    public static void Init() =>
         VerifyQuestPdf.Initialize();
 
-        #endregion
+    #endregion
 
+    [ModuleInitializer]
+    public static void InitOther() =>
         VerifyDiffPlex.Initialize();
-    }
 }
