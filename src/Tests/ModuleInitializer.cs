@@ -10,5 +10,5 @@
 
     [ModuleInitializer]
     public static void InitOther() =>
-        VerifierSettings.Initialize();
+        VerifierSettings.InitializePlugins();
 }
