@@ -1,4 +1,6 @@
-﻿public static class ModuleInitializer
+﻿using QuestPDF.Infrastructure;
+
+public static class ModuleInitializer
 {
     #region enable
 
@@ -9,6 +11,9 @@
     #endregion
 
     [ModuleInitializer]
-    public static void InitOther() =>
+    public static void InitOther()
+    {
+        QuestPDF.Settings.License = LicenseType.Community;
         VerifierSettings.InitializePlugins();
+    }
 }
