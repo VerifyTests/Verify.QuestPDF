@@ -5,7 +5,7 @@
   <ItemGroup>
     <PackageReference Include="Argon" Version="0.6.0" />
     <PackageReference Include="QuestPDF" Version="2022.12.5" />
-    <PackageReference Include="Polyfill" Version="1.21.0" PrivateAssets="all" />
+    <PackageReference Include="Polyfill" Version="1.22.0" PrivateAssets="all" />
     <PackageReference Include="Verify" Version="19.14.1" />
     <PackageReference Include="ProjectDefaults" Version="1.0.90" PrivateAssets="all" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
