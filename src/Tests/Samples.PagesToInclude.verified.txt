@@ -2,9 +2,12 @@
   Pages: 2,
   Metadata: {
     CreationDate: DateTime_1,
-    ModifiedDate: DateTime_2,
-    ImageQuality: 101,
+    ModifiedDate: DateTime_2
+  },
+  Settings: {
+    ContentDirection: LeftToRight,
     PdfA: false,
-    RasterDpi: 72
+    ImageCompressionQuality: VeryHigh,
+    ImageRasterDpi: 144
   }
 }

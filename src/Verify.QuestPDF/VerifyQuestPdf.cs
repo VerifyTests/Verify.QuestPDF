@@ -1,5 +1,4 @@
 ﻿using QuestPDF.Fluent;
-using QuestPDF.Infrastructure;
 
 namespace VerifyTests;
 
@@ -19,7 +18,11 @@ public static class VerifyQuestPdf
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings
             .AddExtraSettings(
-                _ => _.Converters.Add(new DocumentMetadataConverter()));
+                _ =>
+                {
+                    _.Converters.Add(new DocumentMetadataConverter());
+                    _.Converters.Add(new DocumentSettingsConverter());
+                });
         VerifierSettings.RegisterFileConverter<IDocument>(
             conversion: (document, settings) =>
             {
@@ -46,6 +49,7 @@ public static class VerifyQuestPdf
                     {
                         Pages = pages.Count,
                         Metadata = document.GetMetadata(),
+                        Settings = document.GetSettings(),
                     },
                     targets);
             });

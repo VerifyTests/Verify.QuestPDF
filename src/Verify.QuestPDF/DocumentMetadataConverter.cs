@@ -1,5 +1,3 @@
-using QuestPDF.Drawing;
-
 class DocumentMetadataConverter :
     WriteOnlyJsonConverter<DocumentMetadata>
 {
@@ -14,9 +12,6 @@ class DocumentMetadataConverter :
         writer.WriteMember(value, value.Subject, "Subject");
         writer.WriteMember(value, value.CreationDate, "CreationDate");
         writer.WriteMember(value, value.ModifiedDate, "ModifiedDate");
-        writer.WriteMember(value, value.ImageQuality, "ImageQuality");
-        writer.WriteMember(value, value.PdfA, "PdfA");
-        writer.WriteMember(value, value.RasterDpi, "RasterDpi");
         writer.WriteEnd();
     }
 }
