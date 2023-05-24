@@ -98,14 +98,17 @@ public Task VerifyDocument()
   Pages: 2,
   Metadata: {
     CreationDate: DateTime_1,
-    ModifiedDate: DateTime_2,
-    ImageQuality: 101,
+    ModifiedDate: DateTime_2
+  },
+  Settings: {
+    ContentDirection: LeftToRight,
     PdfA: false,
-    RasterDpi: 72
+    ImageCompressionQuality: VeryHigh,
+    ImageRasterDpi: 144
   }
 }
 ```
-<sup><a href='/src/Tests/Samples.VerifyDocument.verified.txt#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.VerifyDocument.verified.txt#L1-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
