@@ -54,7 +54,7 @@ public class Samples
         page.Size(PageSizes.A5);
         page.Margin(1, Unit.Centimetre);
         page.PageColor(Colors.Grey.Lighten3);
-        page.DefaultTextStyle(x => x.FontSize(20));
+        page.DefaultTextStyle(_ => _.FontSize(20));
 
         page.Header()
             .Text("Hello PDF!")
