@@ -103,8 +103,8 @@ public Task VerifyDocument()
   Settings: {
     ContentDirection: LeftToRight,
     PdfA: false,
-    ImageCompressionQuality: VeryHigh,
-    ImageRasterDpi: 144
+    ImageCompressionQuality: High,
+    ImageRasterDpi: 288
   }
 }
 ```
