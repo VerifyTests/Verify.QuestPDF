@@ -6,6 +6,8 @@
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of documents via [QuestPDF](https://www.questpdf.com/).
 
+**See [Milestones](../../milestones?state=closed) for release notes.**
+
 Designed to help assert the output of projects using QuestPDF to generate PDFs.
 
 
