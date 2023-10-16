@@ -9,5 +9,6 @@
     <PackageTags>QuestPDF, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification via QuestPDF.</Description>
     <SignAssembly>false</SignAssembly>
+    <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
   </PropertyGroup>
 </Project>
