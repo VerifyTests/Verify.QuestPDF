@@ -6,8 +6,8 @@
     <PackageReference Include="Argon" Version="0.13.0" />
     <PackageReference Include="QuestPDF" Version="2023.10.2" />
     <PackageReference Include="Polyfill" Version="1.32.1" PrivateAssets="all" />
-    <PackageReference Include="Verify" Version="22.4.1" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.101" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
+    <PackageReference Include="Verify" Version="22.5.0" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.102" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
   </ItemGroup>
 </Project>
