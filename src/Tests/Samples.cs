@@ -61,18 +61,15 @@ public class Samples
             .SemiBold().FontSize(36);
 
         page.Content()
-            .Column(x =>
-            {
-                x.Item()
-                    .Text(Placeholders.LoremIpsum());
-            });
+            .Column(_ => _.Item()
+                .Text(Placeholders.LoremIpsum()));
 
         page.Footer()
             .AlignCenter()
-            .Text(x =>
+            .Text(_ =>
             {
-                x.Span("Page ");
-                x.CurrentPageNumber();
+                _.Span("Page ");
+                _.CurrentPageNumber();
             });
     }
 

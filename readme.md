@@ -53,22 +53,19 @@ static void AddPage(PageDescriptor page)
         .SemiBold().FontSize(36);
 
     page.Content()
-        .Column(x =>
-        {
-            x.Item()
-                .Text(Placeholders.LoremIpsum());
-        });
+        .Column(_ => _.Item()
+            .Text(Placeholders.LoremIpsum()));
 
     page.Footer()
         .AlignCenter()
-        .Text(x =>
+        .Text(_ =>
         {
-            x.Span("Page ");
-            x.CurrentPageNumber();
+            _.Span("Page ");
+            _.CurrentPageNumber();
         });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L43-L79' title='Snippet source file'>snippet source</a> | <a href='#snippet-generatedocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L43-L76' title='Snippet source file'>snippet source</a> | <a href='#snippet-generatedocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
