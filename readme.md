@@ -113,7 +113,7 @@ public Task VerifyDocument()
 
 #### Pdf as image
 
-![](src/Tests/Samples.VerifyDocument.verified.png)
+![](src/Tests/Samples.VerifyDocument%2300.verified.png)
 
 
 ## PagesToInclude
