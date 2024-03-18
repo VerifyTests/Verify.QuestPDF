@@ -10,5 +10,8 @@
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification via QuestPDF.</Description>
     <SignAssembly>false</SignAssembly>
     <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 </Project>
