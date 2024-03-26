@@ -32,7 +32,7 @@ public static void Init() =>
 ### Code that generates a document 
 
 <!-- snippet: GenerateDocument -->
-<a id='snippet-generatedocument'></a>
+<a id='snippet-GenerateDocument'></a>
 ```cs
 static IDocument GenerateDocument() =>
     Document.Create(container =>
@@ -65,14 +65,14 @@ static void AddPage(PageDescriptor page)
         });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L43-L76' title='Snippet source file'>snippet source</a> | <a href='#snippet-generatedocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L43-L76' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
 ### Verify a Document
 
 <!-- snippet: VerifyDocument -->
-<a id='snippet-verifydocument'></a>
+<a id='snippet-VerifyDocument'></a>
 ```cs
 [Test]
 public Task VerifyDocument()
@@ -81,7 +81,7 @@ public Task VerifyDocument()
     return Verify(document);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L8-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-verifydocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L8-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -121,7 +121,7 @@ public Task VerifyDocument()
 To render only a defined number of pages at the start of a document:
 
 <!-- snippet: PagesToInclude -->
-<a id='snippet-pagestoinclude'></a>
+<a id='snippet-PagesToInclude'></a>
 ```cs
 [Test]
 public Task PagesToInclude()
@@ -131,7 +131,7 @@ public Task PagesToInclude()
         .PagesToInclude(1);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L19-L29' title='Snippet source file'>snippet source</a> | <a href='#snippet-pagestoinclude' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L19-L29' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -140,7 +140,7 @@ public Task PagesToInclude()
 To dynamically control what pages are rendered:
 
 <!-- snippet: PagesToIncludeDynamic -->
-<a id='snippet-pagestoincludedynamic'></a>
+<a id='snippet-PagesToIncludeDynamic'></a>
 ```cs
 [Test]
 public Task PagesToIncludeDynamic()
@@ -150,5 +150,5 @@ public Task PagesToIncludeDynamic()
         .PagesToInclude(pageNumber => pageNumber == 2);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L31-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-pagestoincludedynamic' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L31-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
