@@ -5,7 +5,7 @@
   <ItemGroup>
     <PackageReference Include="Argon" Version="0.17.0" />
     <PackageReference Include="QuestPDF" Version="2023.12.6" />
-    <PackageReference Include="Polyfill" Version="4.0.0" PrivateAssets="all" />
+    <PackageReference Include="Polyfill" Version="4.1.0" PrivateAssets="all" />
     <PackageReference Include="Verify" Version="23.5.2" />
     <PackageReference Include="ProjectDefaults" Version="1.0.125" PrivateAssets="all" />
   </ItemGroup>
