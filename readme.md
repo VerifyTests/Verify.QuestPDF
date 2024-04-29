@@ -96,8 +96,8 @@ public Task VerifyDocument()
 {
   Pages: 2,
   Metadata: {
-    CreationDate: DateTime_1,
-    ModifiedDate: DateTime_2
+    CreationDate: DateTimeOffset_1,
+    ModifiedDate: DateTimeOffset_2
   },
   Settings: {
     ContentDirection: LeftToRight,
