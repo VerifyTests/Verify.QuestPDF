@@ -1,6 +1,4 @@
-﻿using QuestPDF.Fluent;
-
-namespace VerifyTests;
+﻿namespace VerifyTests;
 
 public static class VerifyQuestPdf
 {
