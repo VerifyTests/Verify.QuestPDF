@@ -3,7 +3,7 @@
     <TargetFrameworks>net48;net6.0;net7.0;net8.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="QuestPDF" Version="2024.3.4" />
+    <PackageReference Include="QuestPDF" Version="2024.3.5" />
     <PackageReference Include="Polyfill" Version="5.2.2" PrivateAssets="all" />
     <PackageReference Include="Verify" Version="24.1.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.127" PrivateAssets="all" />
