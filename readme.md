@@ -25,7 +25,7 @@ https://nuget.org/packages/Verify.QuestPDF/
 public static void Init() =>
     VerifyQuestPdf.Initialize();
 ```
-<sup><a href='/src/Tests/ModuleInitializer.cs#L5-L11' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -65,7 +65,7 @@ static void AddPage(PageDescriptor page)
         });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L43-L76' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L39-L72' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -81,7 +81,7 @@ public Task VerifyDocument()
     return Verify(document);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L8-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyDocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L4-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -131,7 +131,7 @@ public Task PagesToInclude()
         .PagesToInclude(1);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L19-L29' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L15-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -150,5 +150,5 @@ public Task PagesToIncludeDynamic()
         .PagesToInclude(pageNumber => pageNumber == 2);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L31-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L27-L37' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
