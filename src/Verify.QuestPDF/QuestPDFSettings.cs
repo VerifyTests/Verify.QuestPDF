@@ -1,7 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using VerifyQuestPDF;
-
-namespace VerifyTests;
+﻿namespace VerifyTests;
 
 public static class QuestPDFSettings
 {

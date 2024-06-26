@@ -1,6 +1,4 @@
-﻿using QuestPDF.Infrastructure;
-
-public static class ModuleInitializer
+﻿public static class ModuleInitializer
 {
     #region enable
 

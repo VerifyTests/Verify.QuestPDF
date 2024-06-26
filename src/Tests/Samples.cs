@@ -1,8 +1,4 @@
-﻿using QuestPDF.Fluent;
-using QuestPDF.Helpers;
-using QuestPDF.Infrastructure;
-
-[TestFixture]
+﻿[TestFixture]
 public class Samples
 {
     #region VerifyDocument
