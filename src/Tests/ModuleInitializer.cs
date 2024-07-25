@@ -3,8 +3,11 @@
     #region enable
 
     [ModuleInitializer]
-    public static void Init() =>
+    public static void Init()
+    {
+        VerifyImageMagick.RegisterComparers(0.015);
         VerifyQuestPdf.Initialize();
+    }
 
     #endregion
 

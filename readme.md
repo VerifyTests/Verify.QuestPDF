@@ -22,11 +22,23 @@ https://nuget.org/packages/Verify.QuestPDF/
 <a id='snippet-enable'></a>
 ```cs
 [ModuleInitializer]
-public static void Init() =>
+public static void Init()
+{
+    VerifyImageMagick.RegisterComparers(0.015);
     VerifyQuestPdf.Initialize();
+}
 ```
-<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
+
+This sample uses [Verify.ImageMagick](https://github.com/VerifyTests/Verify.ImageMagick) to ignore small rendering differences that are expected between differens operating systesm.
+
+Other [compares](https://github.com/VerifyTests/Verify/blob/main/docs/comparer.md) options: 
+
+ * https://github.com/VerifyTests/Verify.ImageHash
+ * https://github.com/VerifyTests/Verify.ImageMagick
+ * https://github.com/VerifyTests/Verify.Phash
+ * https://github.com/VerifyTests/Verify.ImageSharp.Compare
 
 
 ### Code that generates a document 
