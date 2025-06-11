@@ -11,9 +11,9 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 Designed to help assert the output of projects using QuestPDF to generate PDFs.
 
 
-## NuGet package
+## NuGet
 
-https://nuget.org/packages/Verify.QuestPDF/
+ * https://nuget.org/packages/Verify.QuestPDF
 
 
 ## Usage
