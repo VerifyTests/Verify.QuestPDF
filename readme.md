@@ -123,13 +123,14 @@ public Task VerifyDocument()
   },
   Settings: {
     ContentDirection: LeftToRight,
-    PdfA: false,
+    PDFA_Conformance: None,
+    PDFUA_Conformance: None,
     ImageCompressionQuality: High,
     ImageRasterDpi: 288
   }
 }
 ```
-<sup><a href='/src/Tests/Samples.VerifyDocument.verified.txt#L1-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.VerifyDocument.verified.txt#L1-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
