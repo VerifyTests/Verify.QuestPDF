@@ -22,7 +22,7 @@ Designed to help assert the output of projects using QuestPDF to generate PDFs.
 
 ### Developed using JetBrains IDEs
 
-[![JetBrains logo.](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSourceSupport)<!-- endInclude -->
+[![JetBrains logo.](https://raw.githubusercontent.com/VerifyTests/Verify.QuestPDF/main/docs/jetbrains.png)](https://jb.gg/OpenSourceSupport)<!-- endInclude -->
 
 
 ## NuGet
