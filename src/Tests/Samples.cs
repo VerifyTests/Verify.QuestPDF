@@ -12,6 +12,30 @@ public class Samples
 
     #endregion
 
+    #region VerifyDocumentWithMetadata
+
+    [Test]
+    public Task VerifyDocumentWithMetadata()
+    {
+        var document = Document.Create(container =>
+            {
+                container.Page(AddPage);
+                container.Page(AddPage);
+            })
+            .WithMetadata(new()
+            {
+                Title = "The Title",
+                Author = "The Author",
+                Subject = "The Subject",
+                Keywords = "keyword1, keyword2",
+                Creator = "The Creator",
+                Producer = "The Producer"
+            });
+        return Verify(document);
+    }
+
+    #endregion
+
     #region PagesToInclude
 
     [Test]
