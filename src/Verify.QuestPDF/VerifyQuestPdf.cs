@@ -2,6 +2,8 @@
 
 public static class VerifyQuestPdf
 {
+    static readonly DateTimeOffset deterministicDate = new(2000, 1, 1, 0, 0, 0, TimeSpan.Zero);
+
     public static bool Initialized { get; private set; }
 
     public static void Initialize()
@@ -25,12 +27,23 @@ public static class VerifyQuestPdf
             conversion: (document, settings) =>
             {
                 var pages = document.GenerateImages().ToList();
-
-                var targets = new List<Target>();
                 if (!settings.GetPagesToInclude(out var pagesToInclude))
                 {
                     pagesToInclude = _ => true;
                 }
+                // QuestPDF stamps DateTimeOffset.Now into the PDF CreationDate/ModifiedDate on
+                // every generation. Pin them to a fixed value so the pdf target is byte-stable.
+                var metadata = document.GetMetadata();
+                metadata.CreationDate = deterministicDate;
+                metadata.ModifiedDate = deterministicDate;
+                var pdf = document.GeneratePdf();
+                List<Target> targets =
+                [
+                    new("pdf", new MemoryStream(pdf), performConversion:false)
+                    {
+                        BypassComparersForSubsequentOnDifference = true
+                    }
+                ];
 
                 for (var index = 0; index < pages.Count; index++)
                 {
@@ -46,10 +59,26 @@ public static class VerifyQuestPdf
                     info: new
                     {
                         Pages = pages.Count,
-                        Metadata = document.GetMetadata(),
+                        Metadata = NullIfEmpty(metadata),
                         Settings = document.GetSettings(),
                     },
                     targets);
             });
+    }
+
+    // Returns null when no displayed metadata members are set, so the empty `Metadata: {}` is omitted from the snapshot.
+    static DocumentMetadata? NullIfEmpty(DocumentMetadata metadata)
+    {
+        if (metadata.Title == null &&
+            metadata.Author == null &&
+            metadata.Subject == null &&
+            metadata.Keywords == null &&
+            metadata.Creator == null &&
+            metadata.Producer == null)
+        {
+            return null;
+        }
+
+        return metadata;
     }
 }

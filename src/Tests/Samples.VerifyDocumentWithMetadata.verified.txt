@@ -1,5 +1,13 @@
 ﻿{
   Pages: 2,
+  Metadata: {
+    Author: The Author,
+    Creator: The Creator,
+    Keywords: keyword1, keyword2,
+    Producer: The Producer,
+    Title: The Title,
+    Subject: The Subject
+  },
   Settings: {
     ContentDirection: LeftToRight,
     PDFA_Conformance: None,

@@ -91,7 +91,7 @@ static void AddPage(PageDescriptor page)
         });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L39-L72' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L63-L96' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -121,10 +121,6 @@ public Task VerifyDocument()
 ```txt
 {
   Pages: 2,
-  Metadata: {
-    CreationDate: DateTimeOffset_1,
-    ModifiedDate: DateTimeOffset_2
-  },
   Settings: {
     ContentDirection: LeftToRight,
     PDFA_Conformance: None,
@@ -134,7 +130,7 @@ public Task VerifyDocument()
   }
 }
 ```
-<sup><a href='/src/Tests/Samples.VerifyDocument.verified.txt#L1-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.VerifyDocument.verified.txt#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -158,7 +154,7 @@ public Task PagesToInclude()
         .PagesToInclude(1);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L15-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L39-L49' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -177,5 +173,5 @@ public Task PagesToIncludeDynamic()
         .PagesToInclude(pageNumber => pageNumber == 2);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L27-L37' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L51-L61' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->

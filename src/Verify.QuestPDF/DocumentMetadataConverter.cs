@@ -10,8 +10,6 @@ class DocumentMetadataConverter :
         writer.WriteMember(value, value.Producer, "Producer");
         writer.WriteMember(value, value.Title, "Title");
         writer.WriteMember(value, value.Subject, "Subject");
-        writer.WriteMember(value, value.CreationDate, "CreationDate");
-        writer.WriteMember(value, value.ModifiedDate, "ModifiedDate");
         writer.WriteEnd();
     }
 }
