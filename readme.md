@@ -121,7 +121,6 @@ public Task VerifyDocument()
 ```txt
 {
   Pages: 2,
-  Metadata: {},
   Settings: {
     ContentDirection: LeftToRight,
     PDFA_Conformance: None,
@@ -131,7 +130,7 @@ public Task VerifyDocument()
   }
 }
 ```
-<sup><a href='/src/Tests/Samples.VerifyDocument.verified.txt#L1-L11' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.VerifyDocument.verified.txt#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-Samples.VerifyDocument.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

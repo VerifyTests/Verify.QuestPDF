@@ -1,6 +1,5 @@
 ﻿{
   Pages: 2,
-  Metadata: {},
   Settings: {
     ContentDirection: LeftToRight,
     PDFA_Conformance: None,

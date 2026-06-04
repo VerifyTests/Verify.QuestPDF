@@ -59,10 +59,26 @@ public static class VerifyQuestPdf
                     info: new
                     {
                         Pages = pages.Count,
-                        Metadata = document.GetMetadata(),
+                        Metadata = NullIfEmpty(metadata),
                         Settings = document.GetSettings(),
                     },
                     targets);
             });
+    }
+
+    // Returns null when no displayed metadata members are set, so the empty `Metadata: {}` is omitted from the snapshot.
+    static DocumentMetadata? NullIfEmpty(DocumentMetadata metadata)
+    {
+        if (metadata.Title == null &&
+            metadata.Author == null &&
+            metadata.Subject == null &&
+            metadata.Keywords == null &&
+            metadata.Creator == null &&
+            metadata.Producer == null)
+        {
+            return null;
+        }
+
+        return metadata;
     }
 }
