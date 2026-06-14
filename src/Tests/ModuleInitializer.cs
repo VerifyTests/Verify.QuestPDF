@@ -5,7 +5,7 @@
     [ModuleInitializer]
     public static void Init()
     {
-        VerifyImageMagick.RegisterComparers(0.015);
+        VerifierSettings.UseSsimForPng();
         VerifyQuestPdf.Initialize();
     }
 

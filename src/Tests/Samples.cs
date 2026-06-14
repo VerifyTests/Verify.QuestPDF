@@ -1,6 +1,14 @@
 ﻿[TestFixture]
 public class Samples
 {
+    #region VerifyFile
+
+    [Test]
+    public Task VerifyFilePath() =>
+        VerifyFile("sample.pdf");
+
+    #endregion
+
     #region VerifyDocument
 
     [Test]
@@ -22,15 +30,16 @@ public class Samples
                 container.Page(AddPage);
                 container.Page(AddPage);
             })
-            .WithMetadata(new()
-            {
-                Title = "The Title",
-                Author = "The Author",
-                Subject = "The Subject",
-                Keywords = "keyword1, keyword2",
-                Creator = "The Creator",
-                Producer = "The Producer"
-            });
+            .WithMetadata(
+                new()
+                {
+                    Title = "The Title",
+                    Author = "The Author",
+                    Subject = "The Subject",
+                    Keywords = "keyword1, keyword2",
+                    Creator = "The Creator",
+                    Producer = "The Producer"
+                });
         return Verify(document);
     }
 

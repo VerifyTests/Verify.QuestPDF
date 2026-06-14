@@ -38,7 +38,7 @@ Designed to help assert the output of projects using QuestPDF to generate PDFs.
 [ModuleInitializer]
 public static void Init()
 {
-    VerifyImageMagick.RegisterComparers(0.015);
+    VerifierSettings.UseSsimForPng();
     VerifyQuestPdf.Initialize();
 }
 ```
@@ -91,7 +91,7 @@ static void AddPage(PageDescriptor page)
         });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L63-L96' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L72-L105' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -107,7 +107,7 @@ public Task VerifyDocument()
     return Verify(document);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L4-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyDocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L12-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -154,7 +154,7 @@ public Task PagesToInclude()
         .PagesToInclude(1);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L39-L49' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L48-L58' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -173,5 +173,5 @@ public Task PagesToIncludeDynamic()
         .PagesToInclude(pageNumber => pageNumber == 2);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L51-L61' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L60-L70' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
