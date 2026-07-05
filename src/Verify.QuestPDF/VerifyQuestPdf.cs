@@ -36,6 +36,8 @@ public static class VerifyQuestPdf
                 var metadata = document.GetMetadata();
                 metadata.CreationDate = deterministicDate;
                 metadata.ModifiedDate = deterministicDate;
+                // The pdf snapshot is always the full document, regardless of PagesToInclude:
+                // PagesToInclude only trims the rendered png pages below.
                 var pdf = document.GeneratePdf();
                 List<Target> targets =
                 [
