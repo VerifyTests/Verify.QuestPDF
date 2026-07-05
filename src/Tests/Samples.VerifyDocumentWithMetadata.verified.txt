@@ -6,7 +6,9 @@
     Keywords: keyword1, keyword2,
     Producer: The Producer,
     Title: The Title,
-    Subject: The Subject
+    Subject: The Subject,
+    CreationDate: DateTimeOffset_1,
+    ModifiedDate: DateTimeOffset_1
   },
   Settings: {
     ContentDirection: LeftToRight,
