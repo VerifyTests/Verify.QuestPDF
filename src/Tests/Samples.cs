@@ -45,6 +45,18 @@ public class Samples
 
     #endregion
 
+    #region ExcludePdf
+
+    [Test]
+    public Task ExcludePdf()
+    {
+        var document = GenerateDocument();
+        return Verify(document)
+            .ExcludeTargets("pdf");
+    }
+
+    #endregion
+
     #region PagesToInclude
 
     [Test]

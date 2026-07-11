@@ -32,20 +32,23 @@ public static class VerifyQuestPdf
                     pagesToInclude = _ => true;
                 }
                 // QuestPDF stamps DateTimeOffset.Now into the PDF CreationDate/ModifiedDate on
-                // every generation. Pin them to a fixed value so the pdf target is byte-stable.
+                // every generation. Pin them to a fixed value so the pdf target and the info are stable.
                 var metadata = document.GetMetadata();
                 metadata.CreationDate = deterministicDate;
                 metadata.ModifiedDate = deterministicDate;
-                // The pdf snapshot is always the full document, regardless of PagesToInclude:
-                // PagesToInclude only trims the rendered png pages below.
-                var pdf = document.GeneratePdf();
-                List<Target> targets =
-                [
-                    new("pdf", new MemoryStream(pdf), performConversion:false)
-                    {
-                        BypassComparersForSubsequentOnDifference = true
-                    }
-                ];
+                List<Target> targets = [];
+                // Generating the pdf is expensive, so skip it entirely when the pdf target is excluded.
+                // The rendered pages and info are unaffected. The pdf snapshot is always the full
+                // document, regardless of PagesToInclude: PagesToInclude only trims the png pages below.
+                if (!settings.IsTargetExcluded("pdf"))
+                {
+                    var pdf = document.GeneratePdf();
+                    targets.Add(
+                        new("pdf", new MemoryStream(pdf), performConversion: false)
+                        {
+                            BypassComparersForSubsequentOnDifference = true
+                        });
+                }
 
                 for (var index = 0; index < pages.Count; index++)
                 {
