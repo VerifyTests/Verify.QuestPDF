@@ -91,7 +91,7 @@ static void AddPage(PageDescriptor page)
         });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L72-L105' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L84-L117' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -139,6 +139,27 @@ public Task VerifyDocument()
 <img src="src/Tests/Samples.VerifyDocument%2300.verified.png" width="300px">
 
 
+## Exclude the pdf
+
+QuestPDF renders the source pdf, and it is included in the snapshot as a `.verified.pdf`. Generating it is expensive, and committing it is not always wanted. [`ExcludeTargets`](https://github.com/VerifyTests/Verify/blob/main/docs/converter.md#excluding-targets) drops it from a verification and skips the generation, while the rendered pages and info still verify:
+
+<!-- snippet: ExcludePdf -->
+<a id='snippet-ExcludePdf'></a>
+```cs
+[Test]
+public Task ExcludePdf()
+{
+    var document = GenerateDocument();
+    return Verify(document)
+        .ExcludeTargets("pdf");
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L48-L58' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcludePdf' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+To exclude the pdf for every test, call `VerifierSettings.ExcludeTargets("pdf")` at initialization.
+
+
 ## PagesToInclude
 
 To render only a defined number of pages at the start of a document:
@@ -154,7 +175,7 @@ public Task PagesToInclude()
         .PagesToInclude(1);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L48-L58' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L60-L70' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -173,5 +194,5 @@ public Task PagesToIncludeDynamic()
         .PagesToInclude(pageNumber => pageNumber == 2);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L60-L70' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L72-L82' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
