@@ -1,4 +1,4 @@
-﻿[TestFixture]
+[TestFixture]
 public class Samples
 {
     #region VerifyFile
@@ -45,6 +45,18 @@ public class Samples
 
     #endregion
 
+    #region SkipPdfNormalization
+
+    [Test]
+    public Task SkipPdfNormalization()
+    {
+        var document = GenerateDocument();
+        return Verify(document)
+            .SkipPdfNormalization();
+    }
+
+    #endregion
+
     #region ExcludePdf
 
     [Test]
@@ -83,7 +95,7 @@ public class Samples
 
     #region GenerateDocument
 
-    static IDocument GenerateDocument() =>
+    internal static IDocument GenerateDocument() =>
         Document.Create(container =>
         {
             container.Page(AddPage);

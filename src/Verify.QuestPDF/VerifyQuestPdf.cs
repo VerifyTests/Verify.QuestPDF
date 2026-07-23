@@ -47,7 +47,12 @@ public static class VerifyQuestPdf
                     // generator stamps in. The metadata dates above are already pinned, so today this
                     // only zeroes those; it also covers the trailer /ID and any XMP packet should a
                     // future QuestPDF or Skia version start emitting them.
-                    var pdf = PdfNormalizer.Normalize(document.GeneratePdf());
+                    var pdf = document.GeneratePdf();
+                    if (settings.Normalize())
+                    {
+                        pdf = PdfNormalizer.Normalize(pdf);
+                    }
+
                     targets.Add(
                         new("pdf", new MemoryStream(pdf), performConversion: false)
                         {
