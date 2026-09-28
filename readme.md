@@ -91,7 +91,7 @@ static void AddPage(PageDescriptor page)
         });
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L96-L129' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L95-L128' title='Snippet source file'>snippet source</a> | <a href='#snippet-GenerateDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -107,7 +107,7 @@ public Task VerifyDocument()
     return Verify(document);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L12-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyDocument' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L11-L20' title='Snippet source file'>snippet source</a> | <a href='#snippet-VerifyDocument' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -154,7 +154,7 @@ public Task ExcludePdf()
         .ExcludeTargets("pdf");
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L60-L70' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcludePdf' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L59-L69' title='Snippet source file'>snippet source</a> | <a href='#snippet-ExcludePdf' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 To exclude the pdf for every test, call `VerifierSettings.ExcludeTargets("pdf")` at initialization.
@@ -175,7 +175,7 @@ public Task PagesToInclude()
         .PagesToInclude(1);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L72-L82' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L71-L81' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToInclude' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -194,5 +194,5 @@ public Task PagesToIncludeDynamic()
         .PagesToInclude(pageNumber => pageNumber == 2);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L84-L94' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L83-L93' title='Snippet source file'>snippet source</a> | <a href='#snippet-PagesToIncludeDynamic' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
