@@ -55,6 +55,29 @@ Other [compares](https://github.com/VerifyTests/Verify/blob/main/docs/comparer.m
  * https://github.com/VerifyTests/Verify.ImageSharp.Compare
 
 
+### Outputs
+
+`Initialize` accepts an optional `QuestPdfOutputs` to control which outputs a document is split into:
+
+ * `Png`: render each page to a png. When omitted, pages are not rasterized at all.
+ * `All`: the default.
+
+The pdf target is not controlled by this setting. Use `VerifierSettings.ExcludeTargets("pdf")` to exclude it.
+
+<!-- snippet: InitializeOutputs -->
+<a id='snippet-InitializeOutputs'></a>
+```cs
+[ModuleInitializer]
+public static void Init()
+{
+    QuestPDF.Settings.License = LicenseType.Community;
+    // Skip rendering pages to png
+    VerifyQuestPdf.Initialize(QuestPdfOutputs.None);
+}
+```
+<sup><a href='/src/StaticSettingsTests/ModuleInitializer.cs#L3-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-InitializeOutputs' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
 ### Code that generates a document 
 
 <!-- snippet: GenerateDocument -->

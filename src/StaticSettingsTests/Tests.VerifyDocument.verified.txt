@@ -1,0 +1,10 @@
+﻿{
+  Pages: 2,
+  Settings: {
+    ContentDirection: LeftToRight,
+    PDFA_Conformance: None,
+    PDFUA_Conformance: None,
+    ImageCompressionQuality: High,
+    ImageRasterDpi: 288
+  }
+}

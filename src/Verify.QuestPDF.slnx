@@ -10,6 +10,7 @@
     <File Path="mdsnippets.json" />
     <File Path="nuget.md" />
   </Folder>
+  <Project Path="StaticSettingsTests/StaticSettingsTests.csproj" />
   <Project Path="Tests/Tests.csproj" />
   <Project Path="Verify.QuestPDF/Verify.QuestPDF.csproj" />
 </Solution>
