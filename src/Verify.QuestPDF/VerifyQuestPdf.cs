@@ -6,7 +6,10 @@ public static class VerifyQuestPdf
 
     public static bool Initialized { get; private set; }
 
-    public static void Initialize()
+    static QuestPdfOutputs outputs = QuestPdfOutputs.All;
+
+    /// <param name="outputs">Which outputs a document is split into. Defaults to <see cref="QuestPdfOutputs.All"/>.</param>
+    public static void Initialize(QuestPdfOutputs outputs = QuestPdfOutputs.All)
     {
         if (Initialized)
         {
@@ -14,6 +17,7 @@ public static class VerifyQuestPdf
         }
 
         Initialized = true;
+        VerifyQuestPdf.outputs = outputs;
 
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings
@@ -26,7 +30,21 @@ public static class VerifyQuestPdf
         VerifierSettings.RegisterFileConverter<IDocument>(
             conversion: (document, settings) =>
             {
-                var pages = document.GenerateImages().ToList();
+                var includePng = outputs.HasFlag(QuestPdfOutputs.Png);
+                // Rasterizing pages is expensive, so only do it when png output is enabled.
+                // Otherwise the page count comes from the much cheaper vector svg generation.
+                List<byte[]> pages = [];
+                int pageCount;
+                if (includePng)
+                {
+                    pages = document.GenerateImages().ToList();
+                    pageCount = pages.Count;
+                }
+                else
+                {
+                    pageCount = document.GenerateSvg().Count;
+                }
+
                 if (!settings.GetPagesToInclude(out var pagesToInclude))
                 {
                     pagesToInclude = _ => true;
@@ -73,7 +91,7 @@ public static class VerifyQuestPdf
                 return new(
                     info: new
                     {
-                        Pages = pages.Count,
+                        Pages = pageCount,
                         Metadata = NullIfEmpty(metadata),
                         Settings = document.GetSettings(),
                     },
