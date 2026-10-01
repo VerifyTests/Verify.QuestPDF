@@ -8,6 +8,11 @@ namespace VerifyTests;
 public enum QuestPdfOutputs
 {
     /// <summary>
+    /// No outputs. Only the source document (and info) is emitted.
+    /// </summary>
+    None = 0,
+
+    /// <summary>
     /// Render each page to a png target.
     /// When omitted, page images are not rendered at all.
     /// </summary>

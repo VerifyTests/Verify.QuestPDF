@@ -7,7 +7,7 @@ public static class ModuleInitializer
     {
         QuestPDF.Settings.License = LicenseType.Community;
         // Skip rendering pages to png
-        VerifyQuestPdf.Initialize(QuestPdfOutputs.All & ~QuestPdfOutputs.Png);
+        VerifyQuestPdf.Initialize(QuestPdfOutputs.None);
     }
 
     #endregion

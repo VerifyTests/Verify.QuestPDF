@@ -72,7 +72,7 @@ public static void Init()
 {
     QuestPDF.Settings.License = LicenseType.Community;
     // Skip rendering pages to png
-    VerifyQuestPdf.Initialize(QuestPdfOutputs.All & ~QuestPdfOutputs.Png);
+    VerifyQuestPdf.Initialize(QuestPdfOutputs.None);
 }
 ```
 <sup><a href='/src/StaticSettingsTests/ModuleInitializer.cs#L3-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-InitializeOutputs' title='Start of snippet'>anchor</a></sup>
