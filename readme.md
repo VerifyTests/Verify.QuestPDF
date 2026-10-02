@@ -60,6 +60,7 @@ Other [compares](https://github.com/VerifyTests/Verify/blob/main/docs/comparer.m
 `Initialize` accepts an optional `QuestPdfOutputs` to control which outputs a document is split into:
 
  * `Png`: render each page to a png. When omitted, pages are not rasterized at all.
+ * `None`: none of the above. Only the info and the source document are emitted.
  * `All`: the default.
 
 The pdf target is not controlled by this setting. Use `VerifierSettings.ExcludeTargets("pdf")` to exclude it.
