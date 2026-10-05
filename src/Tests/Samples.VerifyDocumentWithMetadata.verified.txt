@@ -1,20 +1,22 @@
 ﻿{
-  Pages: 2,
-  Metadata: {
-    Author: The Author,
-    Creator: The Creator,
-    Keywords: keyword1, keyword2,
-    Producer: The Producer,
-    Title: The Title,
-    Subject: The Subject,
-    CreationDate: DateTimeOffset_1,
-    ModifiedDate: DateTimeOffset_1
+  Document: {
+    Metadata: {
+      Author: The Author,
+      Creator: The Creator,
+      Keywords: keyword1, keyword2,
+      Producer: The Producer,
+      Title: The Title,
+      Subject: The Subject,
+      CreationDate: DateTimeOffset_1,
+      ModifiedDate: DateTimeOffset_1
+    },
+    Settings: {
+      ContentDirection: LeftToRight,
+      PDFA_Conformance: None,
+      PDFUA_Conformance: None,
+      ImageCompressionQuality: High,
+      ImageRasterDpi: 288
+    }
   },
-  Settings: {
-    ContentDirection: LeftToRight,
-    PDFA_Conformance: None,
-    PDFUA_Conformance: None,
-    ImageCompressionQuality: High,
-    ImageRasterDpi: 288
-  }
+  PageCount: 2
 }
