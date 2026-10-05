@@ -68,6 +68,18 @@ public class Samples
 
     #endregion
 
+    #region ExcludePng
+
+    [Test]
+    public Task ExcludePng()
+    {
+        var document = GenerateDocument();
+        return Verify(document)
+            .ExcludeDerivedTargets("png");
+    }
+
+    #endregion
+
     #region PagesToInclude
 
     [Test]
