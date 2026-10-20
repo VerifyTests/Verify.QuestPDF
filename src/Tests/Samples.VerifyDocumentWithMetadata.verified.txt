@@ -4,7 +4,6 @@
       Author: The Author,
       Creator: The Creator,
       Keywords: keyword1, keyword2,
-      Producer: The Producer,
       Title: The Title,
       Subject: The Subject,
       CreationDate: DateTimeOffset_1,

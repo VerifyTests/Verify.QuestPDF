@@ -92,8 +92,7 @@ public static class VerifyQuestPdf
             metadata.Author == null &&
             metadata.Subject == null &&
             metadata.Keywords == null &&
-            metadata.Creator == null &&
-            metadata.Producer == null)
+            metadata.Creator == null)
         {
             return null;
         }
