@@ -6,7 +6,7 @@
   <ItemGroup>
     <PackageVersion Include="MarkdownSnippets.MsBuild" Version="29.0.0" />
     <PackageVersion Include="Polyfill" Version="11.4.5" />
-    <PackageVersion Include="ProjectDefaults" Version="1.0.188" />
+    <PackageVersion Include="ProjectDefaults" Version="1.0.189" />
     <PackageVersion Include="DeterministicPdf" Version="2.3.0" />
     <PackageVersion Include="QuestPDF" Version="2026.9.1" />
     <PackageVersion Include="Sbom" Version="0.3.1" />
